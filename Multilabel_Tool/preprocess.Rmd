@@ -1,0 +1,93 @@
+---
+title: "preprocessamento"
+output: html_document
+---
+
+### **Preprocessing** <br>
+
+Preprocessing can refer to manipulating or dropping data, it is necessary in order to get the best results from the applied model. Even if you have good data, you need to make sure that it is, for example, in a correct scale and formats. Some Machine Learning models need data in a specific format, for example, the Random Forest algorithm does not support missing values; therefore, to run it, you need to treat the original raw data sets. <br>
+There are several data preprocessing techniques that can be applied to your dataset. On this page, we will see some of them.  <br>
+
+<hr>
+**Feature Scaling** :
+
+It is the method for limiting the range of variables so that they can be compared on a common basis. It is performed on continuous variables. <br>
+Most often, your dataset will contain attributes that are highly varied in magnitude, units, and range, such as:
+<br> <br>
+ + number of chidren (1 to 8) <br>
+ + BMI (16 to 41 kg/m2)
+ + Monthly percapita income (250 to 4000 US$) 
+ <br>
+<br>
+If we try to apply distance-based methods, such as K-Nearest Neighbors, on these attributes, the attribute with the largest range will dominate the results and we will get less accurate predictions. To suppress this effect, we need to bring all attributes to the same level of magnitude, which can be done using Attribute Scaling. Random forest is able to handle attribute scaling internally.<br>
+
+There are three common methods for performing attribute scaling: <br>
+
+
+
+ - **Standardization**: Standardization replaces values with their *score-Z*, and this redistributes features with their mean 0 and standard deviation 1. For each observed value we decrease the mean of the observations and divide the resulting value by the standard deviation of the observations. <br>
+ 
+ - **Normalization by Mean**: This distribution will have values between -1 and 1 with média igual a 0. For each observed value we decrease the average of the observations and its resulting value is divided by the total amplitute (maximum minus minimum). <br>
+ 
+ 
+ - **Maximum-Minimum Scaling** : This scale brings the value between 0 and 1. For each observed value we decrease the minimum of the observations and its resulting value is divided by the total amplitute (maximum minus minimum). <br>
+ 
+ <br>
+ <br>
+ 
+
+**Missing Values** :
+
+Missing values are present in real-world data. There can be many reasons why they occur, from human errors during data entry to incorrect readings from equipment. It is important to check that the algorithms used support missing values as input. The random forest implemented in this platform does not support such input There are some techniques for dealing with missing values. 
+<br>
+
+- **Removal of Values** : This is the simplest technique, it consists of simply removing the observations that have missing values. It is recommended when there are few missing values in your dataset, something below 10%.
+<br>
+
+- **Imputation of Mean / Median / Mode**:
+In this method, any missing values in a given column are replaced by the mean (or median or mode) of that column. It is also easy to implement and understand.
+<br>
+
+- **Imputation based on regression**:
+In this method, any missing values in a given column are replaced by the response predict by a regression model, using the observed variables as covariates. In R there are packages for performing imputations of this type, such as the MICE package.
+<br>
+
+
+There are also other more advanced techniques, which are beyond the scope of this tool, but can be looked up in the references.
+<br>
+<hr>
+
+**Multi-label Tool e Preprocessing** :
+
+
+In the Multi-Label Tool, preprocessing techniques are applied to both the training and test sets, and to new data to make predictions.
+
+- **All categorical feature variables are considered as factors.**
+<br>
+- **For the random forest algorithms, both single label and multi-label, the continuous feature variables are scaling internally, through standardization.**
+<br>
+
+- **The labels need to be dichotomous in order to use the classifiers of this platform.**
+<br>
+- **The classifiers of this tool does NOT support missing values. ALL LINES containing missing values are excluded from the dataset. You can perform imputation on your data before loading the base into the platform.** <br>
+
+
+<hr>
+
+<br>
+For more information: <br>
+[rdocumentation](https://www.rdocumentation.org/packages/MultivariateRandomForest/versions/1.1/topics/MultivariateRandomForest) <br>
+[randomForestSRC](https://cran.r-project.org/web/packages/randomForestSRC/randomForestSRC.pdf)  <br>
+[Multivariate Random Forest ](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.12) <br>
+[Random Forest missing data algorithms](https://onlinelibrary.wiley.com/doi/10.1002/sam.11348) <br>
+[ Multilabel classification with R package mlr](https://arxiv.org/pdf/1703.08991.pdf) <br>
+[Multi‐label learning: a review of the state of the art and ongoing research](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.1139)<br>
+[ Addressing imbalance in multilabel classification: Measures and random resampling algorithms](https://www.sciencedirect.com/science/article/abs/pii/S0925231215004269?via%3Dihub)
+<br>
+
+
+<hr>
+
+
+
+

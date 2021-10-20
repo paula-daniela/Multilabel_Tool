@@ -1,0 +1,57 @@
+---
+title: "Modelos"
+output:
+  html_document:
+    mathjax: "http://example.com/MathJax.js"
+---
+
+### **Implemented Models** <br>
+
+In this tool, there are 3 different models for you to apply to your multi-label classification problems. Below, a brief introduction to them. 
+<hr>
+
+
+- [Binary Relevance + Random Forest](#BR+RF)
+- [Classifier Chain + Random Forest](#CC+RF)
+- [Multivariate Random Forest](#MRF)
+
+
+<hr>
+
+<br>
+### <a id="BR+RF"></a> **Binary Relevance + Random Forest**
+
+
+The binary relevance method (BR) is the simplest problem transformation method that implements a binary classifier for each label. The labels are predicted independently of each other and label dependencies are not taken into account. <br>
+Transformation methods in general need a base classifier, in this platform we use random forest.<br>
+
+<br>
+<br>
+### <a id="CC+RF"></a> **Classifier Chain + Random Forest**
+
+For this transformation method, a binary classifier is trained for each label following a given order. The dependence between the labels is designed by including in the feature space of each classifier the true label information of all previous labels in the chain. <br>
+Transformation methods in general need a base classifier, in this platform we use random forest.<br>
+<br>
+<br>
+
+
+### <a id="MRF"></a> **Multivariate Random Forest**
+
+
+Multivariate Random Forest(MRF) calculates prediction of all labels using one model, which is generated using the training labels. If the output features are highly correlated then, the prediction using MRF is much improved then prediction using RF. For this algorithm adaptation method, the relationship between the labels is established by a composite normalized Gini index splitting rule which uses a weighted 'covariance' structure (e.g., auto regressive, compound symmetry) to assign the relationship between the labels. 
+
+<br>
+<hr>
+
+For more information: <br>
+[rdocumentation](https://www.rdocumentation.org/packages/MultivariateRandomForest/versions/1.1/topics/MultivariateRandomForest) <br>
+[randomForestSRC](https://cran.r-project.org/web/packages/randomForestSRC/randomForestSRC.pdf)  <br>
+[Multivariate Random Forest ](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.12) <br>
+[Random Forest missing data algorithms](https://onlinelibrary.wiley.com/doi/10.1002/sam.11348) <br>
+[ Multilabel classification with R package mlr](https://arxiv.org/pdf/1703.08991.pdf) <br>
+[Multi‐label learning: a review of the state of the art and ongoing research](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.1139)<br>
+[ Addressing imbalance in multilabel classification: Measures and random resampling algorithms](https://www.sciencedirect.com/science/article/abs/pii/S0925231215004269?via%3Dihub)
+
+
+<br>
+<hr>

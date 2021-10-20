@@ -1,0 +1,13 @@
+name: Multilabel_Tool
+title: Multilabel_Tool
+username:
+account: danielapaula
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4917739
+bundleId: 5159449
+url: https://danielapaula.shinyapps.io/Multilabel_Tool/
+when: 1634751471.3053
+lastSyncTime: 1634751471.3053
+asMultiple: FALSE
+asStatic: FALSE

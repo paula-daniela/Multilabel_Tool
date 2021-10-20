@@ -1,0 +1,47 @@
+---
+title: "Information"
+author: "Daniela"
+date: "2021"
+output: html_document
+---
+
+**Programming Language**
+
+Multi-Label Classifiers Tool was developed using the [R](https://www.r-project.org/) language and the [Shiny](http://shiny.rstudio.com/) and [R Markdown](https://rmarkdown.rstudio.com/) packages.
+
+<br>
+
+
+**Models**
+
+The models available in this application were created using the [mlr](https://mlr.mlr-org.com/) package. This package provides several models and techniques commonly used in machine learning.
+
+
+<br>
+
+
+**Author**
+
+The application was built by Paula, DP as an offshoot of the article "Prediction of multimorbidity using machine learning approach", written in partnership with Aguiar, OB, Marques LP, Bensenor I, Suemoto CK, Fonseca MJM and Griep RH <br>
+For suggestions, bug reporting, or any kind of contact, please send an email to **danielapopaula@gmail.com**.
+<br>
+
+
+
+**References**
+
+- [R](https://www.r-project.org/)
+- [RStudio](https://www.rstudio.com/)
+- [RShiny](http://shiny.rstudio.com/)
+- [RMarkdown](https://rmarkdown.rstudio.com/)
+- [MLR package](https://mlr.mlr-org.com/)
+- [rdocumentation](https://www.rdocumentation.org/packages/MultivariateRandomForest/versions/1.1/topics/MultivariateRandomForest) <br>
+- [randomForestSRC](https://cran.r-project.org/web/packages/randomForestSRC/randomForestSRC.pdf)  <br>
+- [Multivariate Random Forest ](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.12) <br>
+- [Random Forest missing data algorithms](https://onlinelibrary.wiley.com/doi/10.1002/sam.11348) <br>
+- [ Multilabel classification with R package mlr](https://arxiv.org/pdf/1703.08991.pdf) <br>
+- [Multi‐label learning: a review of the state of the art and ongoing research](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.1139)<br>
+- [ Addressing imbalance in multilabel classification: Measures and random resampling algorithms](https://www.sciencedirect.com/science/article/abs/pii/S0925231215004269?via%3Dihub)
+
+<br>
+

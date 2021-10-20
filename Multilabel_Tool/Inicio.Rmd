@@ -1,0 +1,100 @@
+---
+title: "Inicio"
+author: "Daniela"
+date: "2021"
+output: html_document
+---
+
+<style type="text/css">
+
+body, td {
+   font-size: 20px;
+}
+code.r{
+  font-size: 14px;
+  color:  #474747;
+}
+pre {
+  font-size: 14px
+}
+</style>
+
+## **Multi-Label Classifiers Tool**
+<br>
+
+- [Welcome](#boasvindas)
+- [What is a multi-label classifier?](#ml)
+- [How to use Multi-Label Classifier Tool?](#utilizar)
+
+
+<br>
+
+<hr>
+
+
+### <a id="boasvindas"></a>**Welcome**
+
+
+ Multi-label Classifiers Tool is a platform created so that you can build and apply multi-label classification models automatically! 
+ The goal is that you can apply different analysis methods to your dataset intuitively, without prior knowledge of programming and machine learning.  The introductory concepts and explanations presented here are only a guideline for anyone interested in learning more about the topic.
+Build your models, generate and share results in just a few clicks, let's go!  <br>
+
+<hr>
+
+
+
+### <a id="ml"></a>**What is a multi-label classifier?**
+
+A multi-label classifier deals with the classification problem where multiple labels can be assigned to the same instance. 
+
+For example, if we define the set of diseases to be studied in a population as hypertension, diabetes, obesity, joint disease, and kidney disease we will have five labels. Each individual (instance) in this population will receive a classification (1 or 0 - presence or absence) for each of the labels (diseases) considered. Multi-label classifiers are a very useful tool for building predictive models for multimorbidity, known as the coexistence of at least two chronic diseases in the same individual.
+
+It is important to note that multi-label classification is different from multiclass classification, which is a single-label problem of categorizing instances into precisely one of more than two possible classes. For example, the classification of the species of a flower into three possible categories - *iris versicolor*, *iris setosa*, and *iris virginica* - is a multiclass problem. In a multiclass problem, besides having only a single label for each instance, the label categories are mutually exclusive. On the other hand, in a multi-label classification problem, it is necessary to consider the relationship between the various labels of each instance, since they are outcomes of the same individual.
+
+
+Multi-label learning classifiers approach the issue of incorporating the relationship between the diseases in the model design. They provide different ways of establishing the relationship between the diseases and can be divided into two main categories: <br>
+
+- Algorithm adaptation - adapts specific single-label classifiers so they can be applied to the multi-label data directly. <br>
+
+- Problem transformation -  converts the multi-label data into single-label data to then use single-label classifiers. <br>
+
+
+ Multivariate random forest and multi-label KNN are examples of algorithm adaptation methods. For problem transformation methods, the most commonly used algorithms are Binary Relevance (BR), Classifier Chain (CC), Label Powerset (LP) and random k-labelsets (RAKEL).
+
+<hr>
+
+
+
+### <a id="utilizar"></a>**How to use Multi-Label Classifier Tool?**
+
+
+The tool basically consists of the following steps:
+creating the models, checking results and performance, and using the created models to generate predictions.
+
+We have 4 main tabs at the top of the tool:<br>
+
+- **Home**: This is the page you are on now. It presents an overview about the tool, and general concepts. <br>
+- **About Classifiers**: Divided into sub tabs, it presents everything you need to know to understand the features of the models presented in the tool. You can return to the explanations about the models anytime you need, in this section. <br>
+- **Models - Classifiers**: This tab is the section responsible for creating the models and using them. The process is quite simple: <br>
+
+
+
+On the `Build Model` tab: <br>
++ Upload your own dataset in **csv format** <br>
++ Select one of the algorithms listed <br>
++ Fill in all the available fields, being able to navigate between the available options. <br>
++ Create your Model and Export it once created (if desired). <br>
+
+On the `Make Predictions` tab: <br>
++ Enter a new Data Set, which has the same columns corresponding to those used to generate the model. <br>
++ Select between Import an existing Model, or use the one currently created in the tool. <br>
++ Generate the results and download them if you wish. <br>
+
+
+
+- **Information**: Presents information about the construction of the tool, contact information, and useful references. <br>
+  
+<hr>
+  
+
+

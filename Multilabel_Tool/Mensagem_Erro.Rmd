@@ -1,0 +1,17 @@
+---
+title: "Mensagem_Erro.Rmd"
+author: "Daniela"
+date: "2021"
+output: html_document
+---
+
+
+We were not able to create your model. Can you check some steps?
+
+1. Check that your file was imported. (Click on the `Show Dataset` button). It must be in *comma-separated-values* or *csv* format.
+2. Make sure that all the fields have been filled in.
+3. Make sure that the selected **dependent** variable is different from the **independent** variables.
+
+If after checking all this you still cannot generate your template, contact your application administrator.
+
+

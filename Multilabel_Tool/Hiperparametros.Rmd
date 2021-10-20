@@ -1,0 +1,69 @@
+---
+title: "Hyperparameters tuning"
+author: "Daniela"
+date: "2021"
+output: html_document
+mathjax: default
+---
+
+
+## **Hyperparameters**
+<hr>
+
+- [Introduction](#intro)
+- [Multi-label Classifiers Toolkit and Hyperparameters](#mlth)
+
+
+<hr>
+
+#### <a id="intro"></a> **About Hyperparameters**
+
+  Hyperparameters are parameters used to control the learning process and are defined outside learning. Therefore, their values cannot be directly estimated from training data. They can be set subjectively, from prior knowledge of the problem, or they can be set using heuristics. Often, they are tuned for a given predictive modeling problem.
+
+ Different machine learning algorithms require their own hyperparameters, for example **number of trees** in a random forest, **number of neurons** and **number of hidden layers** of a neural network, **kind of kernel** of a Support Vector Machine, among others. Much of the variation in algorithm performance can be attributed to just a few hyperparameters in the models. <br>
+  <hr>
+
+#### <a id="mlth"></a> **Multi-label Tool and Hyperparameters**
+
+  In this platform, as we use random forest as the base classifier for transformation methods and multivariate random forest as the adaptation method, you can choose from the following hyperparameters:<br>
+
+
+ - **ntree**- number of trees. <br>
+ - **nodesize**- minimum size of terminal node. <br>
+ - **mtry**- number of variables randomly sampled as candidates at each split.<br>
+
+or all of the above to generate the models with already predefined hyperparameters.
+
+ To do this, you can choose between cross-validation or repeated cross-validation. The model will be run considering a range of hyperparameters, and the final result will be taken as the one with the best performance within the metric chosen by you. 
+ 
+Within the `Build model`  tab, under `hyperparameters tuning` you can make your choice of hyperparameters; under `cross-validation`, the cross-validation method and under `performance measure` the chosen metric.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+

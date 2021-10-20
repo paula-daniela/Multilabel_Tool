@@ -1,0 +1,50 @@
+---
+title: "modelos_reamostragem e validacao"
+author: "Daniela"
+date: "2021"
+output: html_document
+---
+
+## **Resampling and validation**
+<hr>
+
+After building a model the next step is to evaluate its performance (how good it is), based on some metric. This quality-testing of the model should be done on data that was **not used** for building the model so we can verify that the model actually works for predicting new (never seen) data. If a model is tested with training data (the same data that was used to build it) we will have a bias in this performance estimate and we will not be able to generalize its result. This is why we divide the data set into training and testing. <br>
+
+When we have a large database, it is possible to make an extra division of the training set. We can divide it into training and validation. This validation dataset is used to compare models and make the hyperparameter choices. <br>
+
+ - Training data: used to train the model.
+ 
+ - Validation data: used to compare different models and choose hyperparameters.
+
+ - Test data: used to prove that the model is really a good one. This data is data that was not used in either the training or hyperparameter selection process.
+
+<br>
+
+
+It is necessary to ensure that the training, validation and test data sets have the same distribution as the original data, so that the whole process from building to testing the model is representative of reality. This is why this process is called *resampling*, because the data partitioning is done following a resampling of the observed data. 
+
+In this application we use a sampling method called stratified sampling, based on the distribution of labels in the original data. So both the training data set and the test data set have the same distribution of labels as the original data set. The following splitting choices are usual:
+
+- 0.8 (training) vs 0.2 (test)
+- 0.75 (training) vs 0.25 (test)
+- 0.7 (training) vs 0.3 (test)
+
+ You can choose what percentage of the data you want to train the model by going to the `Build model` tab and selecting `Split rate` to choose the percentage that will be used for training. On this application, the hyperparameter tuning is also done on the training set, we don't do extra splitting on validation data.
+ 
+ To evaluate the performance of the model on different test sets it is quite common to also use bootstrapping, cross-validation, and repeated cross-validation techniques. This way we can get an idea of what the average performance is when different subsets of data are considered.In this case if we choose to also perform hyperparameter tuning, we should do a nested procedure, for example, nested cross-validation.
+
+<hr>
+
+
+<br>
+
+<br>
+For more information: <br>
+[rdocumentation](https://www.rdocumentation.org/packages/MultivariateRandomForest/versions/1.1/topics/MultivariateRandomForest) <br>
+[randomForestSRC](https://cran.r-project.org/web/packages/randomForestSRC/randomForestSRC.pdf)  <br>
+[Multivariate Random Forest ](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.12) <br>
+[Random Forest missing data algorithms](https://onlinelibrary.wiley.com/doi/10.1002/sam.11348) <br>
+[ Multilabel classification with R package mlr](https://arxiv.org/pdf/1703.08991.pdf) <br>
+[Multi‐label learning: a review of the state of the art and ongoing research](https://wires.onlinelibrary.wiley.com/doi/10.1002/widm.1139)<br>
+[ Addressing imbalance in multilabel classification: Measures and random resampling algorithms](https://www.sciencedirect.com/science/article/abs/pii/S0925231215004269?via%3Dihub)
+<br>
